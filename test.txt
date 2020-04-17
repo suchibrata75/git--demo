@@ -1,0 +1,64 @@
+git directory-
+
+1) go to user directory command = pwd(present working directory)
+
+2) register name and email address in global command = git config --global user.name "abcd"
+													git config --global user.email "abcd@gmail.com"
+													
+3) to see my details command = git config --global --list
+
+4) after that within our user directory there will be create a seperate text file with the name of .gitconfig.
+		and the command is = cat ~/.gitconfig
+												
+create project-
+
+1) to create a file = mkdir projects
+
+2) to enter in the the project folder and see the files = ls
+
+3) quit from my project = cd ..
+
+4) 	create my project in my folder = git init (project name)
+
+5)	to enter my project = cd (project name)	
+
+basically when we create a project at first the file will be empty. but there there is a by default .git directory, which manages all the
+different files relevant to git source control. the .git file or folder is hidden from the normal view. if you want to see the .git 
+file then the comaand is = ls -a
+
+
+1) local/machine(only my use) -> github/bitbucket/any cloud storage(all team member in project use)
+
+2) local:
+raw -> staging -> git commit
+
+raw -> staging = git add (file name)
+staging -> git commit = git commit -m "initial commit"
+
+
+
+i -> insert/writing mode
+esc -> exit mode
+esc :wq -> save and exit
+esc :q! -> exit without saving
+
+
+to delete a file = git rm (file name)
+
+
+
+if you want move any folder at first you have to create a root folder = mkdir (root folder name)
+move your file to root folder = git mv (file name) (root folder name)
+
+
+
+setting-up ssh authentication - 
+1) first you have to create .ssh folder in your user directory, not in branch master.
+2) to generate ssh key = ssh-keygen -t rsa -C "email"
+3) after creating your ssh key to show all your ssh file = ls -al
+4) after that generate a id_rsa.pub file. copy the id_rsa.pub file. to see the ssh key just enter the pub file with an editor = vi id_rsa.pub
+5) after that copy the comment from editor.	
+6) create an account in github.
+7) paste the comment in the ssh key section
+8) after that the ssh key will generate
+9) after that write the ssh command to access the github = ssh -T git@github.com 
